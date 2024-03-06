@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Mark from './components/Mark';
+import Title from './components/Title';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         </a>
       </header>
       <Mark backgroundColor="yellow"> scritta evidenziata gilla</Mark>
+    <Title/>
     </div>
   );
 }
