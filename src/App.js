@@ -1,11 +1,27 @@
+<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
 import Mark from './components/Mark';
 import Title from './components/Title';
 
+=======
+import Titolo from './components/Titolo.jsx'
+import Utente from './components/Utente.jsx'
+import Ospite from './components/Ospite.jsx'
+>>>>>>> 57047cd31eeac91229d1cfe3e9498d97dd17091c
 
-function App() {
+import './App.css'
+
+function App () {
+  const utente = localStorage.getItem('utente')
+  let UserComponent
+  if (utente === 'ospite') {
+    UserComponent = <Ospite />
+  } else {
+    UserComponent = <Utente nome={utente} />
+  }
   return (
+<<<<<<< HEAD
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -23,8 +39,13 @@ function App() {
       </header>
       <Mark backgroundColor="yellow"> scritta evidenziata gilla</Mark>
     <Title/>
+=======
+    <div className='page'>
+      <Titolo>il mio Hobby</Titolo>
+      {UserComponent}
+>>>>>>> 57047cd31eeac91229d1cfe3e9498d97dd17091c
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
